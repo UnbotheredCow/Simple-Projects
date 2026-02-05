@@ -47,6 +47,12 @@ body{
 
 }
 
+#startScreen p{
+    color: #666;
+    margin-bottom: 30px;
+    font-style: 1rem;
+}
+
 .quizHeader{
     margin-bottom: 30px;
 }
@@ -87,5 +93,97 @@ body{
 .answerButton:hover{
     background-color: #eadbc8;
     border-color: #dac0ae;
+}
 
+.answerButton.correct{
+    background-color:  #e6fff0;
+    border-color: #a3f0c4;
+    color: #28a745;
+}
+
+.answerButton.incorrect{
+    background-color:  #e6fff0;
+    border-color: #ffbdbd;
+    color: #dc3545;
+}
+
+.progressBar{
+    height: 10px;
+    background-color: #f8f0e5;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress{
+    height: 100%;
+    background-color: #e86a33;
+    width: 0%;
+    transition: width 0.3s ease;
+
+}
+
+/* RESULT SCREEN */
+
+#resultScreen h1{
+    color: #e86a33;
+    margin-bottom: 30px;
+}
+
+.resultInfo{
+    background-color: #f8f0e5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.resultInfo p{
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#resultMessage{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e86a33;
+}
+
+button{
+    background-color: #e86a33;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.1 rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #d45b28;
+}
+
+/* RESPONSIVE DESIGN */
+@media(maxWidth: 500px){
+
+    .screen{
+        padding: 1rem;
+    }
+
+    #startScreen h1{
+        font-size: 2rem;
+    }
+    #questionText {
+        font-size: 1.3rem;
+    }
+
+  .answerButton {
+        padding: 12px;
+    }
+
+  button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
 }
